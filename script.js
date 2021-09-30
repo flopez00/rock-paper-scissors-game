@@ -1,20 +1,28 @@
 const options = ["rock", 'paper', 'scissors'];
 
+function game() {
+    for (let i = 0; i < 4; i++) {
+
+
+
 function computerPlay(_computerSelection) {
     return options[Math.floor(Math.random() * 3)]
 }
 
 function playerPlay(_playerSelection) {
-    return prompt('choose an option! ', '')
-}
+    return prompt('choose an option! ').toLowerCase();
+    
+};
 
 
 const computerSelection = computerPlay();
 const playerSelection = playerPlay();
+
 alert('Computer chose ' + computerPlay())
 
+
 if (playerSelection === computerSelection) {
-    alert ('Tie Game!')
+    alert ('Tie Game!');
 }else if (playerSelection === 'rock' && computerSelection === 'paper') {
     alert ('You lose! Paper beats Rock!');
 } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
@@ -29,5 +37,6 @@ if (playerSelection === computerSelection) {
     alert ('You Win! Scissors beats Paper')
 }
      
+}}
 
-
+game()
